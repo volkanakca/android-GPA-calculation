@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/resim1"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+            android:id="@+id/etDersAd"
+            android:layout_width="264dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="28dp"
+            android:popupBackground="@color/colorAccent"
+            android:backgroundTint="@android:color/transparent"
+            android:textColor="@android:color/white"
+
+            android:textColorHint="@android:color/white"
+
+            android:hint="DersAdını Giriniz"
+
+            app:layout_constraintBottom_toBottomOf="@+id/btnEkle"
+            app:layout_constraintEnd_toStartOf="@+id/btnEkle"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnEkle"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/ekle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <Spinner
+            android:id="@+id/spnDersKredi"
+            android:layout_width="117dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="24dp"
+            android:entries="@array/krediler"
+            android:popupBackground="@color/colorAccent"
+            android:backgroundTint="@color/colorAccent"
+
+
+
+            app:layout_constraintEnd_toStartOf="@+id/spnDersNot"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etDersAd" />
+
+        <Spinner
+            android:id="@+id/spnDersNot"
+            android:layout_width="105dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="116dp"
+            android:entries="@array/tumNotlar"
+            android:popupBackground="@color/colorAccent"
+            android:backgroundTint="@color/colorAccent"
+
+
+
+            app:layout_constraintBottom_toBottomOf="@+id/spnDersKredi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/spnDersKredi"
+            app:layout_constraintTop_toBottomOf="@+id/etDersAd"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorAccent">
+
+    </View>
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+
+        android:layout_height="540dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/rootLayout">
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnOrtalamaHesapla"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="ortalamaHesapla"
+        android:text="Hesapla">
+
+
+    </Button>
+
+
+</LinearLayout>
